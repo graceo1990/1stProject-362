@@ -12,7 +12,7 @@ jQuery(function ValidateEmail(mail)
   }
     alert("Invalid email address entered!")
     return (false)
-}};
+}
 
 /* Form Validation */
 
@@ -22,7 +22,7 @@ function validateForm() {
         alert("Fill out Name Please!");
         return false;
     }
-};
+}
 
 
 
