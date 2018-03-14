@@ -283,3 +283,23 @@ img {
     width: 9%; 
   }
 }
+@media screen and (min-width: 1200px) {
+  html {
+    box-sizing: content-box;
+    font-size: 2.292em; /* 36.674px */
+  }
+  
+  body {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  
+  form > label {
+  	text-align: right;
+    /*width: 85%;*/
+  }
+  
+  p {
+    width: 100%;
+  }
+}
