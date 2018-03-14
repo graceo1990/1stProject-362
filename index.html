@@ -1,52 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="nojs">
 
-	<head>
-		<meta charset="UTF-8">
-		<title> Alert News </title>
-		<link rel="stylesheet" media="screen" href="css/alert.css" />
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
-	</head>
-	<body>
-		<h1> Alert News </h1>
-		<form method="get" action="#null">
-			<fieldset>
-				<h2> Sign Up today </h2>
-				<p> Signing up will give you the ability to learn about the latest news happening around the world. 
-				<p>
-					<label for ="First_Name">First Name:</label>
-					<input type="text" name="first_name_field" id="First_Name">
-				</p>
-				<p>
-					<label for="Last_Name">Last Name:</label>
-					<input type="text" name="last_name_field" id="Last_Name">
-				</p>
-				
-				<p>
-					<label for ="EmailAddress">Email Address:</label>
-					<input type="text" name="email_field" id="EmailAddress">
-				</p>
-				
-			
-				<h2>Which News?</h2>
-				<h3> You have a choice to pick what news you would like the receive. </h3>
-				<p>
-					<label> News Options: </label><br>
-					<input type="checkbox" name="available_field[]" value="Latest News Only"><label>Latest News </label><br>
-					<input type="checkbox" name="available_field[]" value="WorldWide News"><label>Worldwide News</label><br>
-					<input type="checkbox" name="available_field[]" value="Sport"><label>Sports</label><br>
-					<input type="checkbox" name="available_field[]" value="Film"><label>Film</label><br>
-					<input type="checkbox" name="available_field[]" value="Technology"><label>Technology</label><br>
-					<input type="checkbox" name="available_field[]" value="Science"><label>Science</label><br>
-					<input type="checkbox" name="available_field[]" value="All"><label>All</label><br>
-				</p>
-				
-				<input type="submit" name="submit" id="submit" value="Submit" />
-				
-			</fieldset>
-				
-		</form>	
-	</body>
-</html>	
+  <head>
+    <meta charset="UTF-8">
+    <title> Alert News </title>
+    <link rel="stylesheet" media="screen" href="css/alert.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">  
+    <script src="site.js" async></script>
+  </head>
+
+  <body>
+    <h1> Alert News </h1>
+    <img id="logo" src="http://www.pngall.com/wp-content/uploads/2016/05/Newspaper-Free-Download-PNG.png" alt="News Logo">
+    <form method="get" action="#null" autocomplete="on">
+      <fieldset>
+        <h2> Sign Up today </h2>
+        <img id="alert" src="alerticon.png" alt="News alert">
+        <p> Signing up will give you the ability to learn about the latest news happening around the world. 
+        <p>
+          <label for="First_Name">First Name:</label>
+          <input type="text" name="first_name_field" id="First_Name">
+        </p>
+        <p>
+          <label for="Last_Name">Last Name:</label>
+          <input type="text" name="last_name_field" id="Last_Name">
+        </p>
+        <p>
+          <label for="EmailAddress">Email Address:</label>
+          <input type="email" name="email_field" id="EmailAddress">
+        </p>
+        <h2>Which News?</h2>
+        <h3> You have a choice to pick what news you would like the receive. </h3>
+        <p>
+          <label> News Options: </label><br>
+          <input type="checkbox" name="available_field[]" value="Latest News Only"><label>Latest News </label><br>
+          <input type="checkbox" name="available_field[]" value="WorldWide News"><label>Worldwide News</label><br>
+          <input type="checkbox" name="available_field[]" value="Sport"><label>Sports</label><br>
+          <input type="checkbox" name="available_field[]" value="Film"><label>Film</label><br>
+          <input type="checkbox" name="available_field[]" value="Technology"><label>Technology</label><br>
+          <input type="checkbox" name="available_field[]" value="Science"><label>Science</label><br>
+          <input type="checkbox" name="available_field[]" value="All"><label>All</label><br>
+        </p>
+        <a class="button" href="#">Sign Up</a>
+      </fieldset>
+    </form> 
+  </body>
+</html> 
