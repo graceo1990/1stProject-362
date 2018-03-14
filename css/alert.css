@@ -34,7 +34,7 @@ body {
 	line-height: 2.5;
 	background-color: #ff9966 ;
 	padding-left: 15%;
-    padding-right: 15%;
+  padding-right: 15%;
 	display: block;
 	margin: 8px;
 }
@@ -48,7 +48,7 @@ html {
 
 sub,
 sup {
-  font-size: 75%;
+  font-size: 80%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -76,8 +76,8 @@ optgroup,
 select,
 textarea {
   font-family: serif; 
-  font-size: 90%; 
-  line-height: 1.15; 
+  font-size: 100%;  /* 1 */
+  line-height: 1.15; /* 1*/
   margin: 0; 
 }
 /**
@@ -92,9 +92,10 @@ button,
 }
 
 fieldset {
-  padding: 0.25em 0.50em 0.625em;
+  padding: 0.35em 0.625em 0.75em; /* 1 */
 
 }
+
 /* CSS */
 
 body {
@@ -108,37 +109,177 @@ body {
     font-size: 2.72em;
     font-style: normal;
     font-weight: bold;
-	color: blue;
+    color: blue;
 	
   }
   h2 {
-	font-size: 1.68em;
+    font-size: 1.68em;
     font-style: normal;
     font-weight: bold;
-	color: blue;
+    color: blue;
   }
   
  h3 {
-	font-size: 1em;
+    font-size: 1em;
     font-style: normal;
     font-weight: bold;
 	color: #00b36b;
  }
  p {
 	 display: block;
-	 margin-top: 1em;
+	 margin-top: 1em; /* 1*/
 	 margin-bottom: 1em;
 	 margin-left: 0;
 	 margin-right: 0;
 	 font-family: "Times New Roman", Times, serif;
 	 font-style: italic;
 	 font-weight: normal;
+   text-align: left;
  } 
   input {
     display: inline-flex;
     width: auto;
+ 
   }
   input[type=text]:focus {
 	  border: 3px solid #555;
 }
+p input {
+  float: right;
+}
+img {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  width: 80px;
+  height: auto;
+  
+}
+.button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 24px;
+    border: 1px solid #1a5f8d;
+    border-radius: 8px;
+    background: #30b3ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#30b3ff), to(#1a5f8d));
+    background: -moz-linear-gradient(top, #30b3ff, #1a5f8d);
+    background: linear-gradient(to bottom, #30b3ff, #1a5f8d);
+    text-shadow: #0f3853 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:hover,
+.button:focus {
+    border: 1px solid #1e70a6;
+    background: #3ad7ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3ad7ff), to(#1f72a9));
+    background: -moz-linear-gradient(top, #3ad7ff, #1f72a9);
+    background: linear-gradient(to bottom, #3ad7ff, #1f72a9);
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:active {
+    background: #1a5f8d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1a5f8d), to(#1a5f8d));
+    background: -moz-linear-gradient(top, #1a5f8d, #1a5f8d);
+    background: linear-gradient(to bottom, #1a5f8d, #1a5f8d);
+}
+.button:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA7ElEQVRIie3UP0tCURgG8J8hDg0R4SANgk7RELSIUzREUyD4CcRRmvoGfYY+iWPQGo0OLdFcbW4tdwgbupLmuV65dgbBB97hcM77PO+/87LFpuMotsAYFzEFJkhwHVNganeoxBSY4B4Hsw9KOQQVtHGOUzRRw156txPweUUHL8uI93GL90CUq9gYl1nkV2sQz1qCwd8UbzDE4bL0iqKPr3+IfK5E0yaf4Am76fkDDxjhDZ8oo4oGjtFCPRDoQpPLeEyjH/qZmNB0hJA7ptDFM85WJM0SyPxoPb+lKSKQYFDQPxfRl130db3F+vgGy/NemzppbA0AAAAASUVORK5CYII=") no-repeat left center transparent;
+    background-size: 100% 100%;
+}
+/* Mobile first queries */
+@media screen and (min-width: 360px) {
+  form {
+    width: 100%;
+  }
+  
+  form > label {
+	  width: 100%;
+    float: none;
+  }
+ 
+  form > fieldset {
+    width: 99%;
+    float: none;
+  }
+  
+  h1 {
+    font-size: 1.375em; /* 22px */
+  }
+  
+  label {
+    display: block;
+  }
+  
+  input[type=email] {
+    width: 100%; 
+  }
+  
+  input[type=text] {
+    width: 100%;
+  }
+  
+  input[type=radio] {
+    width: 15%; 
+  }
+}
 
+@media screen and (min-width: 480px) {
+  form {
+    margin: 0 0 1em 0; /* 22px */
+    width: 100%;
+  }
+  
+  form > label {
+	  width: 100%;
+    float: none;
+  }
+ 
+  form > fieldset {
+    width: 99%;
+    float: none;
+  }
+  
+  input[type=radio] {
+    width: 9%; 
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    box-sizing: content-box;
+    font-size: 2em; /* 31px */
+  }
+  
+  form {
+    margin-left: 0.825em; /* 13.197px */
+    margin-right: 3.821em; /* 61.136px */
+    width: 100%;
+  }
+  
+  form > label {
+  	text-align: right;
+    width: 100%
+  }
+  
+  p {
+    width: 75%;
+  }
+  
+  input[type=radio] {
+    width: 9%; 
+  }
+}
